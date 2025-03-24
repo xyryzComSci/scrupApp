@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Soft-Eng To-Do list</div>
+        <a href="#" class="task-btn" id="addTaskBtn">Add Task +</a>
+    </nav>
+
+    <div class="task-container" id="taskContainer">
+        <!-- Dynamic tasks will be added here -->
+    </div>
+
+    <!-- Task Modal (Hidden by Default) -->
+
+    <div id="taskModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Task</h2>
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="taskTitle">Title:</label>
+                    <input type="text" id="taskTitle" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="taskDesc">Description:</label>
+                    <textarea id="taskDesc" rows="3" required></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="taskUrgency">Urgency:</label>
+                    <select id="taskUrgency">
+                        <option value="high">High</option>
+                        <option value="mid">Mid</option>
+                        <option value="low">Low</option>
+                    </select>
+                </div>
+    
+                <div class="form-group">
+                    <label for="taskDate">Date:</label>
+                    <input type="date" id="taskDate" required>
+                </div>
+    
+                <button type="submit" class="submit-btn">Add Task</button>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>

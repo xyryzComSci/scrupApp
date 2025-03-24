@@ -1,0 +1,235 @@
+/* Reset default margin & padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #e3e3e3;
+    padding: 20px;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 15px 40px;
+    color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1100px;
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Add Task Button */
+.task-btn {
+    text-decoration: none;
+    background-color: #0088cc;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.task-btn:hover {
+    background-color: #005f99;
+}
+
+/* Task container */
+#taskContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Rectangular task box */
+.task-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid transparent;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    min-height: 150px; /* Ensures a uniform rectangle shape */
+}
+
+/* Task hover effect */
+.task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Task title */
+.task-card h3 {
+    margin: 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Date style */
+.task-card small {
+    color: #666;
+    font-size: 12px;
+}
+
+/* Urgency tag */
+.urgency-label {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+
+/* Urgency colors */
+.urgency-label[style*="red"] { background: #ff4d4d; }  /* High */
+.urgency-label[style*="orange"] { background: #ffcc00; } /* Mid */
+.urgency-label[style*="green"] { background: #4caf50; }  /* Low */
+
+/* Task description */
+.task-card p {
+    font-size: 14px;
+    color: #444;
+    margin: 10px 0 0;
+    line-height: 1.4;
+}
+
+/* Delete button */
+.delete-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #000000;
+    transition: color 0.2s;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+
+/* Urgency Label */
+.urgency-label {
+    display: inline-block;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background for better focus */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    padding: 25px;
+    width: 350px;
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    text-align: left;
+}
+
+/* Modal Header */
+.modal-header {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+    color: #555;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Form Inputs */
+.modal-content label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Textarea */
+.modal-content textarea {
+    resize: none;
+    height: 80px;
+}
+
+
+#addTaskBtn:hover {
+    background: #005f99;
+}
+
+/* Error Message Styling */
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+  
